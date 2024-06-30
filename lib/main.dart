@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widget_practice/Navigator/page_four.dart';
+import 'package:flutter_widget_practice/Navigator/page_one.dart';
+import 'package:flutter_widget_practice/Navigator/page_three.dart';
 
 void main() {
   runApp(MaterialApp(
+    title: "Flutter practice",
+    initialRoute: '/',
+    routes: {
+      '/pagethree': (context) => PageThree(),
+      '/pagefour': (context) => PageFour(),
+    },
     home: MainApp(),
   ));
 }
@@ -11,10 +20,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: null,
-      ),
-    );
+    return const PageOne();
   }
 }
